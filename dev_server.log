@@ -10,3 +10,5 @@
 ○ Compiling / ...
  GET / 200 in 4.9s (next.js: 4.6s, application-code: 336ms)
 [browser] Error sharing screen: NotSupportedError: Not supported (src/components/ScreenShare.tsx:26:15)
+ GET / 200 in 309ms (next.js: 22ms, application-code: 287ms)
+ GET / 200 in 91ms (next.js: 5ms, application-code: 86ms)
