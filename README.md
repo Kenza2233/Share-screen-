@@ -1,46 +1,39 @@
-# Cloud Phone Dashboard v2.0
+# Cloud Phone Dashboard v3.0 (Root Access)
 
-Dashboard ini direka untuk membolehkan pemilik peranti melihat skrin telefon cloud mereka dan menghantar arahan melalui terminal.
+Dashboard pengurusan peranti awan yang dipertingkatkan dengan sokongan akses **Root** dan sistem pelbagai pandangan (Owner Views).
 
-## Cara "Share Screen" Berfungsi
+## Ciri Utama
 
-Aplikasi ini menyokong dua kaedah utama untuk memastikan anda sentiasa dapat melihat skrin:
+### 1. Root Authorized Terminal
+- **Cara Penggunaan**: Taip `su` atau `sudo` dalam terminal untuk mendapatkan akses root.
+- **Kesan**: Prompt akan bertukar dari `>` (Owner) kepada `#` (Root).
+- **Kelebihan**: Membolehkan arahan sistem tahap rendah dijalankan (cth: memadam cache sistem, akses direktori `/system`).
 
-### 1. Cloud Phone Streaming (Disyorkan)
-- **Status**: ✅ Sentiasa Berfungsi (Semua Pelayar & Peranti)
-- **Cara**: Klik butang **"🚀 Sambungkan Cloud Phone"**.
-- **Apa yang berlaku**: Dashboard akan menyambung ke pelayan Cloud Phone dan memaparkan stream visual peranti anda secara langsung (simulasi stream). Ini berfungsi pada Android, iPhone, dan Desktop tanpa memerlukan kebenaran khas pelayar.
+### 2. Owner Views (Multi-Tab)
+Kini pemilik mempunyai tiga pandangan utama untuk menguruskan peranti:
+- **Terminal**: Kawalan baris perintah (command-line) secara langsung.
+- **File Manager**: Lihat struktur fail sistem peranti (Root access diperlukan untuk kawalan penuh).
+- **Analytics**: Pantau prestasi CPU, RAM, Network, dan Bateri secara visual.
 
-### 2. Local Screen Mirroring (Desktop Sahaja)
-- **Status**: ⚠️ Terhad kepada Desktop + HTTPS.
-- **Cara**: Klik butang **"🖥️ Share Screen (Desktop)"**.
-- **Apa yang berlaku**: Anda boleh berkongsi tetingkap atau skrin komputer anda sendiri ke dalam dashboard. Ini berguna untuk tujuan demonstrasi atau kawalan jauh dari PC.
+### 3. Cloud Remote Streaming
+- Mendukung **Cloud Phone Streaming** yang berfungsi secara universal pada semua peranti (Android, iOS, Desktop).
+- Lencana **ROOT ACTIVE** akan muncul apabila sambungan berjaya dilakukan.
 
 ---
 
-## Keserasian Teknikal
+## Keserasian Pelayar
 
-### Sokongan Pelayar (Real Share Screen)
-| Pelayar | Desktop | Mobile (Android/iOS) |
+| Ciri | Desktop | Mobile |
 | :--- | :--- | :--- |
-| **Chrome / Edge** | ✅ Support | ❌ No Support |
-| **Firefox** | ✅ Support | ❌ No Support |
-| **Safari** | ✅ Support | ❌ No Support |
-
-### Sokongan Android (Versi OS)
-- **Android 10+**: Sokongan penuh untuk stream video & audio.
-- **Android 5.0 - 9.0**: Sokongan video sahaja.
-- **Bawah Android 5.0**: Tidak menyokong stream secara asli.
+| **Cloud Streaming** | ✅ Berfungsi | ✅ Berfungsi |
+| **Terminal / Root** | ✅ Berfungsi | ✅ Berfungsi |
+| **Local Screen Share**| ✅ Berfungsi | ❌ Tidak Berfungsi |
 
 ---
 
-## Keperluan Sistem
-- Projek ini memerlukan **HTTPS** untuk fungsi "Real Screen Share".
-- Untuk penggunaan pada telefon bimbit, gunakan fungsi **"Cloud Phone Streaming"**.
-
-## Pemasangan
+## Keperluan Pemasangan
 ```bash
 npm install
 npm run dev
 ```
-Akses di `http://localhost:3000`.
+Akses dashboard di `http://localhost:3000`.
