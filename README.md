@@ -1,52 +1,46 @@
-# Cloud Phone Dashboard
+# Cloud Phone Dashboard v2.0
 
-Projek ini adalah prototaip untuk papan pemuka (dashboard) peranti awan yang menyokong perkongsian skrin secara langsung dan terminal kawalan untuk pemilik.
+Dashboard ini direka untuk membolehkan pemilik peranti melihat skrin telefon cloud mereka dan menghantar arahan melalui terminal.
 
-## Keserasian Pelayar (Browser Compatibility)
+## Cara "Share Screen" Berfungsi
 
-Perkongsian skrin menggunakan API `getDisplayMedia`. Berikut adalah senarai sokongan:
+Aplikasi ini menyokong dua kaedah utama untuk memastikan anda sentiasa dapat melihat skrin:
 
-### Desktop
-| Pelayar | Status Sokongan | Nota |
-| :--- | :--- | :--- |
-| **Chrome** | ✅ Menyokong | Versi 72+ |
-| **Edge** | ✅ Menyokong | Versi 79+ |
-| **Firefox** | ✅ Menyokong | Versi 66+ |
-| **Safari** | ✅ Menyokong | Versi 13+ |
-| **Opera** | ✅ Menyokong | Versi 60+ |
+### 1. Cloud Phone Streaming (Disyorkan)
+- **Status**: ✅ Sentiasa Berfungsi (Semua Pelayar & Peranti)
+- **Cara**: Klik butang **"🚀 Sambungkan Cloud Phone"**.
+- **Apa yang berlaku**: Dashboard akan menyambung ke pelayan Cloud Phone dan memaparkan stream visual peranti anda secara langsung (simulasi stream). Ini berfungsi pada Android, iPhone, dan Desktop tanpa memerlukan kebenaran khas pelayar.
 
-### Mobile (Penting)
-Kebanyakan pelayar mudah alih (mobile) **TIDAK** menyokong perkongsian skrin melalui pelayar web atas sebab keselamatan dan had sistem operasi.
-
-| Platform | Pelayar | Status |
-| :--- | :--- | :--- |
-| **Android** | Chrome for Android | ❌ Tidak Menyokong |
-| **Android** | Firefox for Android | ❌ Tidak Menyokong |
-| **Android** | Samsung Internet | ❌ Tidak Menyokong |
-| **iOS (iPhone)** | Safari on iOS | ❌ Tidak Menyokong |
+### 2. Local Screen Mirroring (Desktop Sahaja)
+- **Status**: ⚠️ Terhad kepada Desktop + HTTPS.
+- **Cara**: Klik butang **"🖥️ Share Screen (Desktop)"**.
+- **Apa yang berlaku**: Anda boleh berkongsi tetingkap atau skrin komputer anda sendiri ke dalam dashboard. Ini berguna untuk tujuan demonstrasi atau kawalan jauh dari PC.
 
 ---
 
-## Keserasian Android (Versi OS)
+## Keserasian Teknikal
 
-Walaupun pelayar web pada Android tidak menyokong perkongsian skrin secara langsung (Direct Screen Share), jika anda menggunakan aplikasi asli (Native App) atau sistem Cloud Phone ini, berikut adalah hadnya:
+### Sokongan Pelayar (Real Share Screen)
+| Pelayar | Desktop | Mobile (Android/iOS) |
+| :--- | :--- | :--- |
+| **Chrome / Edge** | ✅ Support | ❌ No Support |
+| **Firefox** | ✅ Support | ❌ No Support |
+| **Safari** | ✅ Support | ❌ No Support |
 
-1.  **Android 10 dan ke atas**: Menyokong rakaman skrin dan perkongsian dengan audio dalaman.
-2.  **Android 5.0 hingga 9.0**: Menyokong rakaman skrin tanpa audio dalaman secara rasmi (hanya mikrofon).
-3.  **Android di bawah 5.0 (Lollipop)**: **TIDAK MENYOKONG** perkongsian skrin secara asli.
+### Sokongan Android (Versi OS)
+- **Android 10+**: Sokongan penuh untuk stream video & audio.
+- **Android 5.0 - 9.0**: Sokongan video sahaja.
+- **Bawah Android 5.0**: Tidak menyokong stream secara asli.
 
 ---
 
-## Keperluan Teknikal
+## Keperluan Sistem
+- Projek ini memerlukan **HTTPS** untuk fungsi "Real Screen Share".
+- Untuk penggunaan pada telefon bimbit, gunakan fungsi **"Cloud Phone Streaming"**.
 
-1.  **HTTPS**: Perkongsian skrin **WAJIB** dijalankan di atas sambungan selamat (HTTPS) atau `localhost`.
-2.  **Izin Pengguna**: Pengguna mesti memberikan kebenaran (Permission) secara manual apabila tetingkap pop-up muncul.
-3.  **Simulasi Mode**: Jika pelayar anda tidak menyokong API ini (seperti pada telefon bimbit), sila gunakan butang **"Simulasi Demo"** dalam aplikasi untuk melihat fungsi dashboard.
-
-## Cara Menjalankan Projek
-
+## Pemasangan
 ```bash
 npm install
 npm run dev
 ```
-Buka [http://localhost:3000](http://localhost:3000) pada pelayar anda.
+Akses di `http://localhost:3000`.
