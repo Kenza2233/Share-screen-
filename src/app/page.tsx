@@ -18,9 +18,9 @@ export default function Home() {
             </h1>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="hidden md:flex items-center gap-2 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
-            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-            <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Root Authorized</span>
+          <div className="hidden md:flex items-center gap-2 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-[10px] font-bold text-green-400 uppercase tracking-widest">Online</span>
           </div>
           <div className="bg-white/5 border border-white/10 px-3 py-1 rounded-lg text-[10px] font-mono text-gray-400">
             ID: CP-0192-X
@@ -83,7 +83,7 @@ export default function Home() {
                 <div className="h-full bg-gray-900/40 rounded-2xl border border-white/5 p-8 flex flex-col items-center justify-center text-center">
                     <div className="text-5xl mb-4">📂</div>
                     <h3 className="font-bold text-lg mb-2">Cloud File Manager</h3>
-                    <p className="text-xs text-gray-500 max-w-xs">Akses fail sistem secara langsung menggunakan Root. Sila berhati-hati apabila memadam fail sistem.</p>
+                    <p className="text-xs text-gray-500 max-w-xs">Akses fail sistem secara langsung. Pastikan anda menyemak fail sebelum melakukan sebarang perubahan.</p>
                     <div className="mt-8 w-full max-w-md space-y-2">
                         {['/system', '/data', '/cache', '/storage'].map(dir => (
                             <div key={dir} className="flex justify-between p-3 bg-white/5 rounded-xl border border-white/5 text-[10px] font-mono">

@@ -10,7 +10,9 @@ const ScreenShare: React.FC = () => {
   const [isApiSupported, setIsApiSupported] = useState(true);
 
   useEffect(() => {
-    setIsApiSupported(!!(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia));
+    // Determine support once on mount
+    const supported = !!(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia);
+    setIsApiSupported(supported);
 
     const interval = setInterval(() => {
       setLatency(Math.floor(Math.random() * 15) + 20);
@@ -32,9 +34,10 @@ const ScreenShare: React.FC = () => {
       setStreamType("local");
       setError(null);
       stream.getVideoTracks()[0].onended = () => stopStream();
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setError(err.name === "NotAllowedError" ? "Kebenaran ditolak." : "Gagal berkongsi skrin.");
+      const errorMessage = err instanceof Error ? err.name : "UnknownError";
+      setError(errorMessage === "NotAllowedError" ? "Kebenaran ditolak." : "Gagal berkongsi skrin.");
     }
   };
 
@@ -66,9 +69,6 @@ const ScreenShare: React.FC = () => {
             </div>
         </div>
         <div className="flex items-center gap-3">
-            {streamType !== "none" && (
-                <div className="bg-red-500/10 text-red-500 text-[8px] font-black border border-red-500/20 px-2 py-0.5 rounded tracking-widest animate-pulse">ROOT ACTIVE</div>
-            )}
             <div className="text-right">
                 <div className="text-[10px] text-blue-400 font-bold uppercase">Latency</div>
                 <div className="text-xs font-mono text-white">{latency}ms</div>
@@ -102,7 +102,7 @@ const ScreenShare: React.FC = () => {
                     </div>
                     <div className="text-center space-y-2">
                         <h3 className="font-bold text-xl tracking-tight">Android Cloud</h3>
-                        <p className="text-xs text-blue-400 font-medium italic">Root Access Protocol Active</p>
+                        <p className="text-xs text-blue-400 font-medium italic">Sambungan Berjaya</p>
                     </div>
 
                     <div className="mt-12 w-full grid grid-cols-3 gap-4 px-4">

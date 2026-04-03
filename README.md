@@ -1,23 +1,23 @@
-# Cloud Phone Dashboard v3.0 (Root Access)
+# Cloud Phone Dashboard v3.0
 
-Dashboard pengurusan peranti awan yang dipertingkatkan dengan sokongan akses **Root** dan sistem pelbagai pandangan (Owner Views).
+Dashboard pengurusan peranti awan yang dipertingkatkan dengan sistem pelbagai pandangan (Owner Views) dan kawalan terminal langsung.
 
 ## Ciri Utama
 
-### 1. Root Authorized Terminal
-- **Cara Penggunaan**: Taip `su` atau `sudo` dalam terminal untuk mendapatkan akses root.
-- **Kesan**: Prompt akan bertukar dari `>` (Owner) kepada `#` (Root).
-- **Kelebihan**: Membolehkan arahan sistem tahap rendah dijalankan (cth: memadam cache sistem, akses direktori `/system`).
+### 1. Owner Terminal
+- **Cara Penggunaan**: Taip arahan dalam terminal untuk menguruskan peranti.
+- **Kesan**: Prompt `>` menunjukkan anda sedang mengawal peranti sebagai Owner.
+- **Kelebihan**: Membolehkan arahan sistem tahap tinggi dijalankan dan memantau log sistem secara langsung.
 
 ### 2. Owner Views (Multi-Tab)
 Kini pemilik mempunyai tiga pandangan utama untuk menguruskan peranti:
 - **Terminal**: Kawalan baris perintah (command-line) secara langsung.
-- **File Manager**: Lihat struktur fail sistem peranti (Root access diperlukan untuk kawalan penuh).
+- **File Manager**: Lihat struktur fail peranti secara visual.
 - **Analytics**: Pantau prestasi CPU, RAM, Network, dan Bateri secara visual.
 
 ### 3. Cloud Remote Streaming
 - Mendukung **Cloud Phone Streaming** yang berfungsi secara universal pada semua peranti (Android, iOS, Desktop).
-- Lencana **ROOT ACTIVE** akan muncul apabila sambungan berjaya dilakukan.
+- Status **Online** akan muncul apabila sambungan berjaya dilakukan.
 
 ---
 
@@ -26,7 +26,7 @@ Kini pemilik mempunyai tiga pandangan utama untuk menguruskan peranti:
 | Ciri | Desktop | Mobile |
 | :--- | :--- | :--- |
 | **Cloud Streaming** | ✅ Berfungsi | ✅ Berfungsi |
-| **Terminal / Root** | ✅ Berfungsi | ✅ Berfungsi |
+| **Terminal Control**| ✅ Berfungsi | ✅ Berfungsi |
 | **Local Screen Share**| ✅ Berfungsi | ❌ Tidak Berfungsi |
 
 ---
