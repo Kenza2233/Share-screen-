@@ -12,3 +12,4 @@
 [browser] Error sharing screen: NotSupportedError: Not supported (src/components/ScreenShare.tsx:26:15)
  GET / 200 in 309ms (next.js: 22ms, application-code: 287ms)
  GET / 200 in 91ms (next.js: 5ms, application-code: 86ms)
+ GET / 200 in 859ms (next.js: 268ms, application-code: 591ms)
